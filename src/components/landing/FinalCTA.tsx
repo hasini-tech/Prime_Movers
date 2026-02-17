@@ -12,8 +12,9 @@ const FinalCTA = () => {
         <h2 className="font-display text-5xl md:text-7xl font-bold mb-8">
           <span className="text-gradient-gold">Serious Builders Only.</span>
         </h2>
-        <p className="text-muted-foreground text-xl mb-12 max-w-xl mx-auto">
-          This isn't for everyone. It's for those ready to build, connect, and scale.
+        <p className="text-muted-foreground text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+          If you're ready to build influence, access capital, and connect with the right
+          room — apply now.
         </p>
         <Button variant="gold" size="xl" onClick={scrollToForm} className="animate-glow-pulse">
           Apply Now

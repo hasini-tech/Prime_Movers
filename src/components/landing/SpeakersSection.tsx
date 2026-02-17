@@ -12,10 +12,11 @@ const SpeakersSection = () => {
     <section className="py-24">
       <div className="container mx-auto px-6">
         <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-4">
-          Our <span className="text-gradient-gold">Speakers</span>
+          Voices That <span className="text-gradient-gold">Move Markets</span>
         </h2>
         <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
-          World-class leaders share insights at our exclusive private events.
+          We curate world-class speakers — founders who've exited, investors who've deployed
+          billions, and operators who've scaled globally — for intimate, closed-door sessions.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {speakers.map((speaker, i) => (

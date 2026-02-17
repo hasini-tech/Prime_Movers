@@ -19,7 +19,7 @@ const ApplicationForm = () => {
       <div className="absolute inset-0 gradient-purple opacity-20" />
       <div className="relative container mx-auto px-6 max-w-2xl">
         <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-4">
-          <span className="text-gradient-gold">Apply</span> to Join
+          <span className="text-gradient-gold">Enter</span> the Circle
         </h2>
         <p className="text-muted-foreground text-center mb-12">
           Membership is by application only. Tell us about yourself.
@@ -44,11 +44,28 @@ const ApplicationForm = () => {
               />
             </div>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label className="text-sm font-medium mb-2 block text-foreground/80">Company Name</label>
+              <Input
+                required
+                placeholder="Your Company"
+                className="bg-background/50 border-border/50 focus:border-primary h-12"
+              />
+            </div>
+            <div>
+              <label className="text-sm font-medium mb-2 block text-foreground/80">Industry</label>
+              <Input
+                required
+                placeholder="e.g. FinTech, SaaS, Health"
+                className="bg-background/50 border-border/50 focus:border-primary h-12"
+              />
+            </div>
+          </div>
           <div>
-            <label className="text-sm font-medium mb-2 block text-foreground/80">Company Name</label>
+            <label className="text-sm font-medium mb-2 block text-foreground/80">LinkedIn Profile</label>
             <Input
-              required
-              placeholder="Your Company"
+              placeholder="https://linkedin.com/in/yourprofile"
               className="bg-background/50 border-border/50 focus:border-primary h-12"
             />
           </div>
@@ -73,7 +90,7 @@ const ApplicationForm = () => {
           </div>
           <div>
             <label className="text-sm font-medium mb-2 block text-foreground/80">
-              Why do you want to join?
+              Why do you want to join Prime Movers?
             </label>
             <Textarea
               required
