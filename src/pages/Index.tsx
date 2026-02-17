@@ -1,10 +1,12 @@
 import Navbar from "@/components/landing/Navbar";
 import HeroSection from "@/components/landing/HeroSection";
-import AboutSection from "@/components/landing/AboutSection";
+import VisionSection from "@/components/landing/VisionSection";
 import PillarsSection from "@/components/landing/PillarsSection";
 import HowItWorksSection from "@/components/landing/HowItWorksSection";
+import WhoShouldJoinSection from "@/components/landing/WhoShouldJoinSection";
 import PodcastSection from "@/components/landing/PodcastSection";
 import SpeakersSection from "@/components/landing/SpeakersSection";
+import CommunityImpactSection from "@/components/landing/CommunityImpactSection";
 import ApplicationForm from "@/components/landing/ApplicationForm";
 import FinalCTA from "@/components/landing/FinalCTA";
 import Footer from "@/components/landing/Footer";
@@ -14,11 +16,13 @@ const Index = () => {
     <main className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      <AboutSection />
+      <VisionSection />
       <PillarsSection />
       <HowItWorksSection />
+      <WhoShouldJoinSection />
       <PodcastSection />
       <SpeakersSection />
+      <CommunityImpactSection />
       <ApplicationForm />
       <FinalCTA />
       <Footer />

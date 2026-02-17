@@ -6,9 +6,14 @@ const PodcastSection = () => {
     <section className="py-24 relative">
       <div className="absolute inset-0 gradient-purple opacity-20" />
       <div className="relative container mx-auto px-6">
-        <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-16">
-          The <span className="text-gradient-gold">Podcast</span>
+        <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-4">
+          The <span className="text-gradient-gold">Prime Podcast</span>
         </h2>
+        <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
+          Every founder has a story worth telling. The Prime Podcast gives our members a
+          platform to share their journey, amplify their brand, and inspire the next
+          generation of builders.
+        </p>
         <div className="max-w-4xl mx-auto glass-card rounded-2xl p-8 md:p-12">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="w-48 h-48 flex-shrink-0 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center group cursor-pointer hover:border-primary/60 transition-all duration-300">
@@ -19,14 +24,15 @@ const PodcastSection = () => {
                 <Headphones className="w-4 h-4" /> Featured Episode
               </span>
               <h3 className="font-display text-2xl md:text-3xl font-bold mb-3">
-                Building a $10M Business in 18 Months
+                From Zero to $10M — A Prime Mover Story
               </h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Hear from one of our founding members on how strategic networking and the right
-                investor connections helped scale their startup from zero to eight figures.
+                Hear how one of our founding members leveraged strategic connections,
+                investor introductions, and relentless execution to build an
+                eight-figure company in under two years.
               </p>
               <Button variant="goldOutline" size="lg">
-                Listen Now
+                Be Featured
               </Button>
             </div>
           </div>
