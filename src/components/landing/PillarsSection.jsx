@@ -5,43 +5,25 @@ const pillars = [
     icon: Users,
     title: "Strategic Networking",
     description: "Curated connections that move the needle for your business.",
-    bullets: [
-      "Curated member access",
-      "Founder collaborations",
-      "Private networking events",
-    ],
+    bullets: ["Curated member access", "Founder collaborations", "Private networking events"],
   },
   {
     icon: TrendingUp,
     title: "Fundraising Access",
     description: "Direct pathways to capital through trusted investor networks.",
-    bullets: [
-      "Investor introductions",
-      "Pitch review sessions",
-      "Demo days",
-      "Capital strategy workshops",
-    ],
+    bullets: ["Investor introductions", "Pitch review sessions", "Demo days", "Capital strategy workshops"],
   },
   {
     icon: Mic,
     title: "Prime Podcast",
     description: "Amplify your story and build authority in your space.",
-    bullets: [
-      "Feature members",
-      "Amplify founder stories",
-      "Increase business visibility",
-    ],
+    bullets: ["Feature members", "Amplify founder stories", "Increase business visibility"],
   },
   {
     icon: Calendar,
     title: "Exclusive Speaker Forums",
     description: "Intimate sessions with leaders who've built at scale.",
-    bullets: [
-      "Recognized entrepreneurs",
-      "Industry leaders",
-      "Private Q&A sessions",
-      "Closed-door roundtables",
-    ],
+    bullets: ["Recognized entrepreneurs", "Industry leaders", "Private Q&A sessions", "Closed-door roundtables"],
   },
 ];
 

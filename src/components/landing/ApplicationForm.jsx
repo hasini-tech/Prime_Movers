@@ -9,7 +9,7 @@ const stages = ["Idea Stage", "Pre-Seed", "Seed", "Series A+", "Profitable"];
 const ApplicationForm = () => {
   const [selectedStage, setSelectedStage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     toast.success("Application submitted! We'll be in touch soon.");
   };
@@ -28,46 +28,26 @@ const ApplicationForm = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label className="text-sm font-medium mb-2 block text-foreground/80">Full Name</label>
-              <Input
-                required
-                placeholder="John Doe"
-                className="bg-background/50 border-border/50 focus:border-primary h-12"
-              />
+              <Input required placeholder="John Doe" className="bg-background/50 border-border/50 focus:border-primary h-12" />
             </div>
             <div>
               <label className="text-sm font-medium mb-2 block text-foreground/80">Email</label>
-              <Input
-                required
-                type="email"
-                placeholder="john@company.com"
-                className="bg-background/50 border-border/50 focus:border-primary h-12"
-              />
+              <Input required type="email" placeholder="john@company.com" className="bg-background/50 border-border/50 focus:border-primary h-12" />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label className="text-sm font-medium mb-2 block text-foreground/80">Company Name</label>
-              <Input
-                required
-                placeholder="Your Company"
-                className="bg-background/50 border-border/50 focus:border-primary h-12"
-              />
+              <Input required placeholder="Your Company" className="bg-background/50 border-border/50 focus:border-primary h-12" />
             </div>
             <div>
               <label className="text-sm font-medium mb-2 block text-foreground/80">Industry</label>
-              <Input
-                required
-                placeholder="e.g. FinTech, SaaS, Health"
-                className="bg-background/50 border-border/50 focus:border-primary h-12"
-              />
+              <Input required placeholder="e.g. FinTech, SaaS, Health" className="bg-background/50 border-border/50 focus:border-primary h-12" />
             </div>
           </div>
           <div>
             <label className="text-sm font-medium mb-2 block text-foreground/80">LinkedIn Profile</label>
-            <Input
-              placeholder="https://linkedin.com/in/yourprofile"
-              className="bg-background/50 border-border/50 focus:border-primary h-12"
-            />
+            <Input placeholder="https://linkedin.com/in/yourprofile" className="bg-background/50 border-border/50 focus:border-primary h-12" />
           </div>
           <div>
             <label className="text-sm font-medium mb-3 block text-foreground/80">Business Stage</label>
@@ -92,12 +72,7 @@ const ApplicationForm = () => {
             <label className="text-sm font-medium mb-2 block text-foreground/80">
               Why do you want to join Prime Movers?
             </label>
-            <Textarea
-              required
-              rows={4}
-              placeholder="Tell us about your goals and what you're looking for..."
-              className="bg-background/50 border-border/50 focus:border-primary resize-none"
-            />
+            <Textarea required rows={4} placeholder="Tell us about your goals and what you're looking for..." className="bg-background/50 border-border/50 focus:border-primary resize-none" />
           </div>
           <Button variant="gold" size="xl" className="w-full">
             Submit Application

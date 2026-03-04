@@ -30,7 +30,6 @@ const HowItWorksSection = () => {
             </div>
           ))}
         </div>
-        {/* Mobile vertical layout */}
         <div className="md:hidden space-y-8">
           {steps.map((step, i) => (
             <div key={step.title} className="flex gap-6 items-start">
