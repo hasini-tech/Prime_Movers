@@ -1,22 +1,71 @@
-const Footer = () => (
-  <footer className="py-12 border-t border-border/30">
-    <div className="container mx-auto px-6">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-        <span className="font-display text-lg font-bold text-gradient-gold">PRIME MOVERS</span>
-        <div className="flex items-center gap-6 text-muted-foreground text-sm">
-          <a href="#" className="hover:text-primary transition-colors">Twitter</a>
-          <a href="#" className="hover:text-primary transition-colors">LinkedIn</a>
-          <a href="#" className="hover:text-primary transition-colors">Instagram</a>
-          <a href="mailto:hello@primemovers.com" className="hover:text-primary transition-colors">
-            hello@primemovers.com
-          </a>
+import { Twitter, Linkedin, Instagram, Mail, ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
+
+const Footer = () => {
+  return (
+    <footer className="relative border-t border-border bg-background pt-16 pb-8 overflow-hidden">
+      {/* Decorative gradients */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-deep/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-gold/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          {/* Brand Column */}
+          <div className="lg:col-span-2 space-y-6">
+            <span className="font-display text-2xl font-bold text-gradient-gold">
+              PRIME MOVERS
+            </span>
+            <p className="text-muted-foreground text-sm md:text-base max-w-md leading-relaxed">
+              Empowering visionary founders and community builders to shape the future. Join our network of leaders driving meaningful change.
+            </p>
+          </div>
+
+          {/* Empty column for spacing */}
+          <div className="hidden lg:block"></div>
+
+          {/* Contact / Socials */}
+          <div className="space-y-6">
+            <h4 className="font-semibold text-foreground tracking-wide font-display text-lg">Connect With Us</h4>
+            <div className="flex items-center gap-4">
+              <SocialLink href="https://x.com/PrimeMoversOfcl" icon={<Twitter className="w-5 h-5" />} label="X (Twitter)" />
+              <SocialLink href="https://www.linkedin.com/company/primemoverscommunity" icon={<Linkedin className="w-5 h-5" />} label="LinkedIn" />
+              <SocialLink href="https://www.instagram.com/primemovers.official?igsh=MWtwajNwazJsbXY4dw==" icon={<Instagram className="w-5 h-5" />} label="Instagram" />
+            </div>
+            <a href="mailto:primemoversnetwork@gmail.com" className="inline-flex items-center gap-2 text-sm text-gold hover:text-gold-glow transition-colors group">
+              <Mail className="w-4 h-4" />
+              primemoversnetwork@gmail.com
+              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform opacity-70" />
+            </a>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-muted-foreground text-sm">
+            © {new Date().getFullYear()} Prime Movers. All rights reserved.
+          </p>
+          <div className="flex gap-6 text-sm text-muted-foreground">
+            <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-gold transition-colors">Terms of Service</a>
+          </div>
         </div>
       </div>
-      <p className="text-muted-foreground text-sm mt-6 text-center md:text-left">
-        © {new Date().getFullYear()} Prime Movers. All rights reserved.
-      </p>
-    </div>
-  </footer>
+    </footer>
+  );
+};
+
+const SocialLink = ({ href, icon, label }) => (
+  <motion.a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={label}
+    whileHover={{ y: -3, scale: 1.1 }}
+    whileTap={{ scale: 0.95 }}
+    className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-muted-foreground hover:bg-purple-deep/20 hover:text-gold hover:border-gold/30 transition-colors duration-300"
+  >
+    {icon}
+  </motion.a>
 );
 
 export default Footer;

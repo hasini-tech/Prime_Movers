@@ -6,6 +6,7 @@ import HowItWorksSection from "@/components/landing/HowItWorksSection";
 import WhoShouldJoinSection from "@/components/landing/WhoShouldJoinSection";
 import PodcastSection from "@/components/landing/PodcastSection";
 import SpeakersSection from "@/components/landing/SpeakersSection";
+import TeamSection from "@/components/landing/TeamSection";
 import CommunityImpactSection from "@/components/landing/CommunityImpactSection";
 import ApplicationForm from "@/components/landing/ApplicationForm";
 import FinalCTA from "@/components/landing/FinalCTA";
@@ -22,6 +23,7 @@ const Index = () => {
       <WhoShouldJoinSection />
       <PodcastSection />
       <SpeakersSection />
+      <TeamSection />
       <CommunityImpactSection />
       <ApplicationForm />
       <FinalCTA />
