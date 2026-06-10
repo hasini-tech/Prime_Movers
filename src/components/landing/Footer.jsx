@@ -1,5 +1,11 @@
-import { Twitter, Linkedin, Instagram, Mail, ArrowUpRight } from "lucide-react";
+import { Twitter, Linkedin, Instagram, Mail, ArrowUpRight, Youtube } from "lucide-react";
 import { motion } from "framer-motion";
+
+const XLogo = ({ className }) => (
+  <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.936H5.023z" />
+  </svg>
+);
 
 const Footer = () => {
   return (
@@ -27,9 +33,10 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="font-semibold text-foreground tracking-wide font-display text-lg">Connect With Us</h4>
             <div className="flex items-center gap-4">
-              <SocialLink href="https://x.com/PrimeMoversOfcl" icon={<Twitter className="w-5 h-5" />} label="X (Twitter)" />
+              <SocialLink href="https://youtube.com/@primemoverscommunity?si=gNInMEW9c2UoTak2" icon={<Youtube className="w-5 h-5" />} label="Youtube" />
               <SocialLink href="https://www.linkedin.com/company/primemoverscommunity" icon={<Linkedin className="w-5 h-5" />} label="LinkedIn" />
               <SocialLink href="https://www.instagram.com/primemovers.official?igsh=MWtwajNwazJsbXY4dw==" icon={<Instagram className="w-5 h-5" />} label="Instagram" />
+              <SocialLink href="https://x.com/PrimeMoversOfcl" icon={<XLogo className="w-4 h-4" />} label="X (Twitter)" />
             </div>
             <a href="mailto:primemoversnetwork@gmail.com" className="inline-flex items-center gap-2 text-sm text-gold hover:text-gold-glow transition-colors group">
               <Mail className="w-4 h-4" />

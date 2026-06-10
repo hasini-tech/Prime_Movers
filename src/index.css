@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,49 +6,49 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4.3%;
+    --background: 266 70% 9%;
     --foreground: 45 10% 90%;
 
-    --card: 270 57% 10%;
+    --card: 264 70% 16%;
     --card-foreground: 45 10% 90%;
 
-    --popover: 0 0% 6%;
+    --popover: 266 70% 9%;
     --popover-foreground: 45 10% 90%;
 
-    --primary: 43 90% 61%;
-    --primary-foreground: 0 0% 4.3%;
+    --primary: 44 90% 61%;
+    --primary-foreground: 266 70% 9%;
 
-    --secondary: 270 57% 27%;
+    --secondary: 264 70% 16%;
     --secondary-foreground: 45 10% 90%;
 
-    --muted: 270 20% 15%;
-    --muted-foreground: 270 10% 55%;
+    --muted: 264 50% 20%;
+    --muted-foreground: 264 20% 60%;
 
-    --accent: 270 57% 27%;
-    --accent-foreground: 43 90% 61%;
+    --accent: 264 70% 16%;
+    --accent-foreground: 44 90% 61%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 270 30% 20%;
-    --input: 270 20% 18%;
-    --ring: 43 90% 61%;
+    --border: 264 50% 20%;
+    --input: 264 50% 20%;
+    --ring: 44 90% 61%;
 
     --radius: 0.5rem;
 
-    --gold: 43 90% 61%;
-    --gold-glow: 43 100% 50%;
-    --purple-deep: 270 57% 27%;
-    --purple-glow: 270 60% 40%;
+    --gold: 44 90% 61%;
+    --gold-glow: 44 90% 50%;
+    --purple-deep: 264 70% 16%;
+    --purple-glow: 264 80% 30%;
 
-    --sidebar-background: 0 0% 6%;
+    --sidebar-background: 266 70% 9%;
     --sidebar-foreground: 45 10% 90%;
-    --sidebar-primary: 43 90% 61%;
-    --sidebar-primary-foreground: 0 0% 4.3%;
-    --sidebar-accent: 270 57% 27%;
+    --sidebar-primary: 44 90% 61%;
+    --sidebar-primary-foreground: 266 70% 9%;
+    --sidebar-accent: 264 70% 16%;
     --sidebar-accent-foreground: 45 10% 90%;
-    --sidebar-border: 270 30% 20%;
-    --sidebar-ring: 43 90% 61%;
+    --sidebar-border: 264 50% 20%;
+    --sidebar-ring: 44 90% 61%;
   }
 }
 
@@ -61,13 +61,12 @@
     @apply bg-background text-foreground font-body antialiased;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h3, h4, h5, h6 {
     @apply font-display;
+  }
+
+  h2 {
+    @apply font-display text-gold !important;
   }
 }
 

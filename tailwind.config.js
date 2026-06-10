@@ -12,7 +12,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Playfair Display", "serif"],
+        display: ["Oswald", "sans-serif"],
         body: ["Inter", "sans-serif"],
       },
       colors: {
