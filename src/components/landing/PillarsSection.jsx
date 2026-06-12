@@ -4,26 +4,26 @@ const pillars = [
   {
     icon: Users,
     title: "Strategic Networking",
-    description: "Curated connections that move the needle for your business.",
-    bullets: ["Curated member access", "Founder collaborations", "Private networking events"],
+    description: "Build valuable connections with founders, mentors, and industry leaders.",
+    bullets: ["Curated member introductions", "Founder-to-founder connections", "Collaboration opportunities", "Exclusive networking events"],
   },
   {
     icon: TrendingUp,
-    title: "Fundraising Access",
-    description: "Direct pathways to capital through trusted investor networks.",
-    bullets: ["Investor introductions", "Pitch review sessions", "Demo days", "Capital strategy workshops"],
+    title: "Growth & Opportunities",
+    description: "Access opportunities, resources, and guidance to grow faster.",
+    bullets: ["Investor & mentor access", "Pitch feedback and reviews", "Startup growth discussions", "Business and funding insights"],
   },
   {
     icon: Mic,
     title: "Prime Podcast",
-    description: "Amplify your story and build authority in your space.",
-    bullets: ["Feature members", "Amplify founder stories", "Increase business visibility"],
+    description: "Share your journey, inspire others, and expand your reach.",
+    bullets: ["Founder spotlights", "Success stories and lessons learned", "Business exposure and reach", "Community-driven conversations"],
   },
   {
     icon: Calendar,
-    title: "Exclusive Speaker Forums",
-    description: "Intimate sessions with leaders who've built at scale.",
-    bullets: ["Recognized entrepreneurs", "Industry leaders", "Private Q&A sessions", "Closed-door roundtables"],
+    title: "Expert Talks & Founder Forums",
+    description: "Learn from experienced founders and industry experts.",
+    bullets: ["Entrepreneur fireside chats", "Expert-led sessions", "Interactive Q&A discussions", "Private roundtables and networking"],
   },
 ];
 
@@ -33,10 +33,11 @@ const PillarsSection = () => {
       <div className="absolute inset-0 gradient-purple opacity-30" />
       <div className="relative container mx-auto px-6">
         <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-4">
-          The <span className="text-gradient-gold">Prime Pillars</span>
+          The <span className="text-gradient-gold">Prime Movers Experience
+          </span>
         </h2>
         <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
-          Four foundational pillars that power the Prime Movers ecosystem.
+          Connect. Learn. Grow. Lead.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {pillars.map((pillar) => (

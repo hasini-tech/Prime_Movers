@@ -9,22 +9,16 @@ const VisionSection = () => {
         <div className="w-24 h-0.5 bg-primary mx-auto mb-12" />
         <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
           <p>
-            Prime Movers is not a community — it's an ecosystem. A long-term infrastructure
-            designed for founders who think in decades, not quarters. Every member is hand-selected
-            for their ambition, capability, and willingness to contribute to collective growth.
+            Prime Movers is a community built for entrepreneurs, founders, creators, and professionals who believe in the power of learning, collaboration, and growth.
           </p>
           <p>
-            Here, strategic relationships are the currency. Access to capital is a feature, not
-            a dream. Shared growth is the default mode of operation. And collective influence
-            is what separates this room from every other network you've been part of.
+            We connect ambitious individuals with experienced leaders, creating opportunities to share knowledge, build meaningful relationships, and unlock new possibilities. Through mentorship, networking, and real-world insights, Prime Movers helps people move from ideas to action and from potential to progress.
           </p>
           <p>
-            We've architected Prime Movers around one principle:{" "}
+
             <span className="text-foreground font-semibold">
-              the right room changes everything.
-            </span>{" "}
-            When ambitious operators surround themselves with equally driven peers, investors,
-            and mentors — breakthroughs become inevitable.
+              Because great journeys are rarely built alone.
+            </span>
           </p>
         </div>
       </div>

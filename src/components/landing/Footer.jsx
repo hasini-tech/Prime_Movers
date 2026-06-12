@@ -1,5 +1,6 @@
 import { Twitter, Linkedin, Instagram, Mail, ArrowUpRight, Youtube } from "lucide-react";
 import { motion } from "framer-motion";
+import logo from "../../assets/PrimeMovers-removebg.png"
 
 const XLogo = ({ className }) => (
   <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
@@ -18,9 +19,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-2 space-y-6">
-            <span className="font-display text-2xl font-bold text-gradient-gold">
-              PRIME MOVERS
-            </span>
+            <img src={logo} alt="logo" className="w-32" />
             <p className="text-muted-foreground text-sm md:text-base max-w-md leading-relaxed">
               Empowering visionary founders and community builders to shape the future. Join our network of leaders driving meaningful change.
             </p>

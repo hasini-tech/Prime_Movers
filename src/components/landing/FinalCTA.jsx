@@ -10,14 +10,13 @@ const FinalCTA = () => {
       <div className="absolute inset-0 gradient-purple opacity-30" />
       <div className="relative container mx-auto px-6 text-center">
         <h2 className="font-display text-5xl md:text-7xl font-bold mb-8">
-          <span className="text-gradient-gold">Serious Builders Only.</span>
+          <span className="text-gradient-gold">Be Part of the Movement.</span>
         </h2>
         <p className="text-muted-foreground text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-          If you're ready to build influence, access capital, and connect with the right
-          room — apply now.
+          Connect with like-minded builders, receive community updates, discover opportunities, and stay informed about upcoming events, sessions, Podcast and meetups.
         </p>
         <Button variant="gold" size="xl" onClick={scrollToForm} className="animate-glow-pulse">
-          Apply Now
+          Join the Community
         </Button>
       </div>
     </section>

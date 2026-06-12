@@ -28,7 +28,7 @@ const teamMembers = [
   },
   {
     name: "Alwin",
-    role: "Lead Investor",
+    role: "Organizer",
     image: alwinImg, // Replace with your local path
     description: "Providing resources and strategic guidance.",
   }
@@ -45,15 +45,12 @@ const TeamSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <Badge variant="outline" className="mb-4 border-brand-purple text-brand-purple bg-brand-purple/10">
-            Our Team
-          </Badge>
+
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
-            Meet The <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-brand-gold">Minds</span> Behind It
+            The People <span className="text-foreground"> Behind </span> Prime Movers
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A dedicated group of founders, community leaders, and investors working together to make this vision a reality.
-          </p>
+            The individuals who came together with a shared vision to build a stronger community for learning, connection, and growth.          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
