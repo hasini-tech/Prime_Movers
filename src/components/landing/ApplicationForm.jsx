@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import { motion } from "framer-motion";
 
 const stages = ["Idea Stage", "Pre-Seed", "Seed", "Series A+", "Profitable"];
 
@@ -15,16 +16,23 @@ const ApplicationForm = () => {
   };
 
   return (
-    <section id="apply" className="py-24 relative">
+    <section id="apply" className="section-shell py-20 sm:py-24 relative">
       <div className="absolute inset-0 gradient-purple opacity-20" />
       <div className="relative container mx-auto px-6 max-w-2xl">
-        <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-4">
+        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
           <span className="text-gradient-gold">Enter</span> the Circle
         </h2>
         <p className="text-muted-foreground text-center mb-12">
           Membership is by application only. Tell us about yourself.
         </p>
-        <form onSubmit={handleSubmit} className="glass-card rounded-2xl p-8 md:p-12 space-y-6">
+        <motion.form
+          onSubmit={handleSubmit}
+          initial={{ opacity: 0, y: 34 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="glass-card depth-card rounded-2xl p-5 sm:p-8 md:p-12 space-y-6"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label className="text-sm font-medium mb-2 block text-foreground/80">Full Name</label>
@@ -74,10 +82,10 @@ const ApplicationForm = () => {
             </label>
             <Textarea required rows={4} placeholder="Tell us about your goals and what you're looking for..." className="bg-background/50 border-border/50 focus:border-primary resize-none" />
           </div>
-          <Button variant="gold" size="xl" className="w-full">
+          <Button variant="gold" size="xl" className="w-full px-6 text-base sm:text-lg">
             Submit Application
           </Button>
-        </form>
+        </motion.form>
       </div>
     </section>
   );

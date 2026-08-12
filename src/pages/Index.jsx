@@ -19,13 +19,13 @@ const Index = () => {
       <HeroSection />
       <VisionSection />
       <PillarsSection />
-      {/*<HowItWorksSection />*/}
+      <HowItWorksSection />
       {/*<WhoShouldJoinSection />*/}
       <PodcastSection />
       {/*<SpeakersSection />*/}
       <TeamSection />
       {/*<CommunityImpactSection />*/}
-      {/*<ApplicationForm />*/}
+      <ApplicationForm />
       <FinalCTA />
       <Footer />
     </main>

@@ -59,6 +59,11 @@
 
   body {
     @apply bg-background text-foreground font-body antialiased;
+    scroll-behavior: smooth;
+    background:
+      radial-gradient(circle at 20% 10%, hsl(190 80% 40% / 0.08), transparent 28rem),
+      radial-gradient(circle at 80% 0%, hsl(44 90% 61% / 0.09), transparent 26rem),
+      hsl(var(--background));
   }
 
   h1, h3, h4, h5, h6 {
@@ -84,16 +89,20 @@
   }
 
   .glass-card {
-    @apply backdrop-blur-xl border border-border/50;
+    @apply backdrop-blur-xl border border-white/10;
     background: linear-gradient(135deg,
-        hsl(270 57% 27% / 0.15),
-        hsl(270 57% 27% / 0.05));
+        hsl(266 70% 18% / 0.74),
+        hsl(222 47% 11% / 0.54));
+    box-shadow:
+      0 24px 80px hsl(266 70% 4% / 0.38),
+      inset 0 1px 0 hsl(0 0% 100% / 0.08);
   }
 
   .gradient-purple {
     background: linear-gradient(135deg,
-        hsl(270 57% 27% / 0.4),
-        transparent 60%);
+        hsl(266 70% 22% / 0.34),
+        hsl(190 80% 32% / 0.10) 42%,
+        transparent 68%);
   }
 
   .text-gradient-gold {
@@ -102,5 +111,64 @@
         hsl(43 90% 61%),
         hsl(43 100% 75%),
         hsl(43 90% 61%));
+  }
+
+  .section-shell {
+    @apply relative overflow-hidden;
+  }
+
+  .depth-card {
+    transform-style: preserve-3d;
+    transform: perspective(1000px) translateZ(0);
+    transition: transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 300ms ease, box-shadow 300ms ease;
+  }
+
+  .depth-card:hover {
+    transform: perspective(1000px) translateY(-10px) rotateX(4deg) rotateY(-4deg);
+    box-shadow:
+      0 32px 90px hsl(266 70% 3% / 0.55),
+      0 0 42px hsl(44 90% 61% / 0.14),
+      inset 0 1px 0 hsl(0 0% 100% / 0.12);
+  }
+
+  .depth-lift {
+    transform: translateZ(34px);
+  }
+
+  .shine-sweep {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shine-sweep::after {
+    content: "";
+    position: absolute;
+    inset: -40% auto -40% -70%;
+    width: 45%;
+    transform: rotate(18deg);
+    background: linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.16), transparent);
+    transition: left 700ms ease;
+  }
+
+  .shine-sweep:hover::after {
+    left: 120%;
+  }
+
+  @media (hover: none) {
+    .depth-card:hover {
+      transform: perspective(1000px) translateZ(0);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .section-shell {
+      scroll-margin-top: 88px;
+    }
+
+    .glass-card {
+      box-shadow:
+        0 18px 50px hsl(266 70% 4% / 0.3),
+        inset 0 1px 0 hsl(0 0% 100% / 0.08);
+    }
   }
 }

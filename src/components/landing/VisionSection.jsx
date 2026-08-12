@@ -1,13 +1,27 @@
+import { motion } from "framer-motion";
+
 const VisionSection = () => {
   return (
-    <section className="py-24 relative">
+    <section className="section-shell py-20 sm:py-24 relative">
       <div className="container mx-auto px-6 max-w-4xl">
-        <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-6">
+        <motion.h2
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55 }}
+          viewport={{ once: true }}
+          className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6"
+        >
           Built for Builders.{" "}
           <span className="text-gradient-gold">Designed for Leaders.</span>
-        </h2>
+        </motion.h2>
         <div className="w-24 h-0.5 bg-primary mx-auto mb-12" />
-        <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="glass-card depth-card rounded-xl p-6 sm:p-8 md:p-10 space-y-6 sm:space-y-8 text-base sm:text-lg text-muted-foreground leading-relaxed"
+        >
           <p>
             Prime Movers is a community built for entrepreneurs, founders, creators, and professionals who believe in the power of learning, collaboration, and growth.
           </p>
@@ -20,7 +34,7 @@ const VisionSection = () => {
               Because great journeys are rarely built alone.
             </span>
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

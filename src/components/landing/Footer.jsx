@@ -1,6 +1,6 @@
-import { Twitter, Linkedin, Instagram, Mail, ArrowUpRight, Youtube } from "lucide-react";
+import { Linkedin, Instagram, Mail, ArrowUpRight, Youtube } from "lucide-react";
 import { motion } from "framer-motion";
-import logo from "../../assets/PrimeMovers-removebg.png"
+import logo from "../../assets/PrimeMovers-removebg.png";
 
 const XLogo = ({ className }) => (
   <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
@@ -10,47 +10,42 @@ const XLogo = ({ className }) => (
 
 const Footer = () => {
   return (
-    <footer className="relative border-t border-border bg-background pt-16 pb-8 overflow-hidden">
-      {/* Decorative gradients */}
+    <footer className="relative border-t border-border bg-background pt-12 pb-8 overflow-hidden sm:pt-16">
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-deep/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-gold/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Brand Column */}
-          <div className="lg:col-span-2 space-y-6">
-            <img src={logo} alt="logo" className="w-32" />
+        <div className="grid grid-cols-1 gap-10 mb-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+          <div className="lg:col-span-2 space-y-5 sm:space-y-6">
+            <img src={logo} alt="Prime Movers" className="w-32" />
             <p className="text-muted-foreground text-sm md:text-base max-w-md leading-relaxed">
               Empowering visionary founders and community builders to shape the future. Join our network of leaders driving meaningful change.
             </p>
           </div>
 
-          {/* Empty column for spacing */}
-          <div className="hidden lg:block"></div>
+          <div className="hidden lg:block" />
 
-          {/* Contact / Socials */}
-          <div className="space-y-6">
+          <div className="space-y-5 sm:space-y-6">
             <h4 className="font-semibold text-foreground tracking-wide font-display text-lg">Connect With Us</h4>
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               <SocialLink href="https://youtube.com/@primemoverscommunity?si=gNInMEW9c2UoTak2" icon={<Youtube className="w-5 h-5" />} label="Youtube" />
               <SocialLink href="https://www.linkedin.com/company/primemoverscommunity" icon={<Linkedin className="w-5 h-5" />} label="LinkedIn" />
               <SocialLink href="https://www.instagram.com/primemovers.official?igsh=MWtwajNwazJsbXY4dw==" icon={<Instagram className="w-5 h-5" />} label="Instagram" />
-              <SocialLink href="https://x.com/PrimeMoversOfcl" icon={<XLogo className="w-4 h-4" />} label="X (Twitter)" />
+              <SocialLink href="https://x.com/PrimeMoversOfcl" icon={<XLogo className="w-4 h-4" />} label="X" />
             </div>
-            <a href="mailto:primemoversnetwork@gmail.com" className="inline-flex items-center gap-2 text-sm text-gold hover:text-gold-glow transition-colors group">
-              <Mail className="w-4 h-4" />
+            <a href="mailto:primemoversnetwork@gmail.com" className="inline-flex max-w-full items-center gap-2 break-all text-sm text-gold hover:text-gold-glow transition-colors group">
+              <Mail className="w-4 h-4 flex-shrink-0" />
               primemoversnetwork@gmail.com
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform opacity-70" />
+              <ArrowUpRight className="w-4 h-4 flex-shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform opacity-70" />
             </a>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Prime Movers. All rights reserved.
+            &copy; {new Date().getFullYear()} Prime Movers. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-muted-foreground">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-gold transition-colors">Terms of Service</a>
           </div>
