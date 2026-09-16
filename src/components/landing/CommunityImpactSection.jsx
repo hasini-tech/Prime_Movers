@@ -30,4 +30,5 @@ const CommunityImpactSection = () => {
   );
 };
 
+
 export default CommunityImpactSection;
